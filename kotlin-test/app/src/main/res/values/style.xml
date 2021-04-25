@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <style name="CustomLoadingBar" parent="progressBarStyleLarge">-->
+<!--        <item name="android:height">90dp</item>-->
+<!--        <item name="android:width">90dp</item>-->
+<!--        <item name="android:indeterminateDrawable">@drawable/import_test</item>-->
+<!--    </style>-->
+</resources>
