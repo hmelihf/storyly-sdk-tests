@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_storyly_test/pokemon_detail_page.dart';
 
-import 'app_values.dart';
-import 'data.dart';
+import 'package:flutter_storyly_test/pokemon_detail_page.dart';
+import 'package:flutter_storyly_test/app_values.dart';
+import 'package:flutter_storyly_test/data.dart';
 
 class PokemonListWidget extends StatefulWidget {
   @override
@@ -37,9 +37,9 @@ class _PokemonListWidgetState extends State<PokemonListWidget> {
             onFailShowSnackBar(context, "fetch pokemon failed", loadPokemon));
   }
 
-  Widget _buildListTile(BuildContext context, int index) {
+  Widget _buildListTileFront(BuildContext context, int index) {
     final pokemon = _pokemonList[index];
-    return InkWell(
+    return GestureDetector(
       onTap: () => onPokemonTap(context, pokemon), // handle your onTap here
       child: Container(
           margin: const EdgeInsets.all(8.0),
@@ -73,11 +73,11 @@ class _PokemonListWidgetState extends State<PokemonListWidget> {
       padding: const EdgeInsets.all(8.0),
       child: GridView.builder(
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemCount: _pokemonList.length,
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
-        itemBuilder: _buildListTile,
+        itemBuilder: _buildListTileFront,
       ),
     );
   }

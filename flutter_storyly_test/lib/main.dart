@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_storyly_test/app_values.dart';
-import 'package:flutter_storyly_test/pokemon_list_widget.dart';
-import 'package:flutter_storyly_test/storyly_widget.dart';
+import 'package:flutter_storyly_test/widgets/pokemon_list_widget.dart';
+import 'package:flutter_storyly_test/widgets/storyly_widget.dart';
 
 void main() {
   runApp(MyApp());
